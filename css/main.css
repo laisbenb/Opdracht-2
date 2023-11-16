@@ -1,0 +1,518 @@
+body {
+    background-color: hsl(0, 0%, 87%);
+    font-family: 'Poppins', sans-serif;
+    color: hsl(256, 15%, 28%);
+}
+
+p {
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.container {
+    width: 90%;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+/*
+==========
+HEADER
+==========
+*/
+
+header {
+    background-color: hsl(256, 15%, 28%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+/* === Logo and name === */
+
+.logo-and-name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo-and-name img {
+    width: 5rem;
+}
+
+.logo-and-name h1 {
+    font-weight: 700;
+    color: white;
+}
+
+.logo-and-name h1 span {
+    color: hsl(186, 96%, 43%);
+}
+
+/* === Navigation === */
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    padding: .5rem;
+}
+
+.navigation a:last-of-type {
+    border: .125rem solid hsl(186, 96%, 43%);
+    border-radius: .5rem;
+}
+
+.navigation a:hover {
+    transition-duration: .2s;
+    color: hsl(186, 96%, 43%);
+    border-bottom: .125rem solid hsl(186, 96%, 43%);
+}
+
+.navigation a:last-of-type:hover {
+    transition-duration: .2s;
+    background-color: hsl(186, 96%, 43%);
+    color: black;
+}
+
+/*
+==========
+MAIN
+==========
+*/
+
+/*
+------ HOME PAGE -------
+*/
+
+/* == ICE BEAR PART == */
+
+.top-container {
+    background-color: hsl(186, 96%, 43%);
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-container img {
+    max-width: 100%;
+    width: 50rem;
+    height: auto;
+    position: absolute;
+    right: 60%;
+    top: 25%;
+}
+
+.top-container img:hover {
+    animation: icebear 3s infinite;
+}
+
+@keyframes icebear {
+    0% {
+        rotate: 5deg;
+    }
+
+    50% {
+        rotate: -5deg;
+    }
+
+    100% {
+        rotate: 5deg;
+    }
+}
+
+.title h1,
+.title h2 {
+    color: hsl(256, 15%, 28%);
+}
+
+.title h1 {
+    font-size: 3rem;
+}
+
+@media (min-width: 29rem) and (max-width: 51.25rem) {
+    .top-container {
+        color: red;
+        flex-direction: column;
+        min-width: 100vw;
+    }
+
+    .top-container img {
+        position: relative;
+        right: 35%;
+        top: 21%;
+        order: 2;
+        max-width: 25rem;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .title {
+        max-width: none;
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 28.75rem) {
+    .top-container {
+        flex-direction: column;
+        max-height: 70%;
+        min-width: 100vw;
+    }
+
+    .top-container img {
+        max-width: 19rem;
+        margin-top: 0;
+        margin-left: 0;
+        position: relative;
+        right: 40%;
+        top: 26%;
+        order: 2;
+    }
+
+    .title {
+        max-width: none;
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+}
+
+/* == BIKER PART == */
+
+.biker-container {
+    text-align: center;
+}
+
+.biker-container h1 {
+    padding-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.biker-container-content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.biker-img {
+    width: 25%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.content-card {
+    text-align: left;
+}
+
+/* === STEVEN HAWKING QUOTE === */
+
+.steven-hawking-quote {
+    background-color: hsl(11, 99%, 59%);
+    padding: 5rem;
+}
+
+.steven-hawking-quote h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+.cols {
+    display: flex;
+    gap: 2rem;
+}
+
+.col-left p {
+    padding: 1rem;
+}
+
+.col-left {
+    width: 21%;
+}
+
+.col-left img {
+    border: .1875rem solid white;
+    border-radius: 6rem;
+    padding: .3rem;
+}
+
+.col-left p {
+    color: white;
+    line-height: 0;
+    text-align: center;
+}
+
+.col-right {
+    background-color: white;
+    width: 80%;
+    padding: 1rem;
+    border-radius: 1rem
+}
+
+/* === BLOG CARDS === */
+
+.blog {
+    margin-top: 5rem;
+}
+
+.blog h2 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.blog-card-flexbox {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 6rem;
+}
+
+.blog-card {
+    background-color: white;
+    width: 30%;
+    box-shadow: .5rem .5rem 1rem gray;
+    position: relative;
+}
+
+.blog-card h2 {
+    font-weight: 400;
+    padding-left: .7rem;
+    margin-top: .7rem;
+    padding-bottom: 0;
+}
+
+.blog-card p {
+    padding-left: .7rem;
+}
+
+.time-ago {
+    background-color: hsl(0, 0%, 87%);
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    width: 60%;
+    height: 6%;
+    margin-bottom: 2rem;
+    margin-left: .7rem;
+    padding: .2rem;
+    border-radius: 1rem;
+}
+
+.time-ago img {
+    width: 10%;
+}
+
+.italic {
+    display: flex;
+    gap: .4rem;
+    padding-left: 0rem;
+    font-style: italic;
+}
+
+.read-more {
+    display: flex;
+    gap: .4rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    padding-left: .7rem;
+    text-decoration: none;
+    color: hsl(256, 15%, 28%);
+}
+
+.read-more img {
+    width: 5%;
+}
+
+.read-more:hover>img {
+    transform: translateX(.3rem);
+    animation-duration: 1s;
+}
+
+.new {
+    background-color: hsl(11, 99%, 59%);
+    color: white;
+    padding-right: .7rem;
+    position: absolute;
+    bottom: 63%;
+    right: 10%;
+}
+
+h2.new {
+    font-size: 1.3rem;
+    padding-bottom: 0;
+}
+
+/* === SPINNING MOON === */
+
+.spinning-moon-flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.moon-image {
+    width: 2%;
+    position: absolute;
+    bottom: 50%;
+    animation: circle 6s linear infinite;
+}
+
+.earth-image {
+    width: 8%;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg) translate(6rem) rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg) translate(6rem) rotate(-360deg);
+    }
+}
+
+/* === THE ATMOSPHERE === */
+
+.the-atmosphere h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.the-atmosphere-content {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.4rem;
+}
+
+/*
+------ HOME PAGE -------
+*/
+
+.about {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.who-are-we {
+    margin: 2rem;;
+}
+
+.about h2 {
+    font-size: 2rem;
+}
+
+.what-we-do {
+    margin: 2rem;
+    padding-bottom: 2rem;
+}
+
+.what-we-do-flexbox {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.work-card {
+    width: 35%;
+    text-align: left;
+    background-color: white;
+    padding: .5rem;
+    box-shadow: 1rem 1rem 1rem gray;
+}
+
+.work-card img {
+    height: 50%;
+    width: 80%;
+    border: 3px solid hsl(256, 15%, 28%);
+    margin: .5rem 0;
+}
+
+/*
+==========
+FOOTER
+==========
+*/
+
+footer {
+    background-color: hsl(256, 15%, 28%);
+    color: white;
+}
+
+/* === FOOTER BOXES === */
+
+.footer-flexbox {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.box {
+    width: 20%;
+}
+
+.box h2 {
+    font-weight: 400;
+}
+
+.box ul {
+    padding: 0;
+}
+
+.box li {
+    list-style: none;
+}
+
+.box a {
+    color: white;
+}
+
+.socials {
+    display: flex;
+    gap: .5rem;
+}
+
+.socials img {
+    width: 15%;
+}
+
+/* === CREDITS === */
+
+.credits {
+    background-color: black;
+    text-align: center;
+}
+
+.credits p {
+    padding: .6rem 0;
+}
